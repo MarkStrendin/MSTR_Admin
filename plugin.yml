@@ -1,0 +1,86 @@
+name: StrendinAdmin
+main: ca.strendin.StrendinAdmin.StrendinAdmin
+version: 0.4
+website: https://github.com/MarkStrendin/StrendinAdmin
+authors:
+  - Mark Strendin
+description: Basic admin enhancements
+permissions:
+  strendinadmin.setspawn:
+   description: Able to set the spawn point for the current world
+   default: op
+  strendinadmin.kick:
+   description: Able to kick players from the server
+   default: op
+  strendinadmin.ban:
+   description: Able to ban players from the server
+   default: op
+  strendinadmin.info:
+   description: Able to get information from players, including health and hunger
+   default: op
+  strendinadmin.teleport:
+   description: Able to teleport
+   default: op
+  strendinadmin.time:
+   description: Able to set day and night
+   default: op
+  strendinadmin.weather:
+   description: Able to adjust the weather
+   default: op
+  strendinadmin.grant:
+   desription: Able to grant levels to players
+   default: op
+  strendinadmin.spawn:
+   description: Able to teleport to the spawn point
+   default: true
+commands:  
+  setspawn:
+    aliases: []
+    description: Sets the world's spawn location
+    usage: |
+           /<command>
+  spawn:
+    aliases: []
+    description: Teleports to the world's spawn location
+    usage: |
+           /<command>
+  playerinfo:
+    aliases: [pi,whois,info]
+    description: Displays player information for the specified player
+    usage: |
+           /<command>  
+  bring:
+    aliases: [b]
+    description: Teleports selected player to the caster
+    usage: |
+           /<command>
+  tp:
+    aliases: [tp]
+    description: Teleports player to another player
+    usage: |
+           /<command>
+  day:
+    aliases: []
+    description: Sets the current world's time to day
+    usage: |
+           /<command>  
+  night:
+    aliases: []
+    description: Sets the current world's time to night
+    usage: |
+           /<command>
+  stoprain:
+    aliases: [stopstorm,stopthunderstorm,rainoff,stormoff]
+    description: Stops rain/snow
+    usage: |
+           /<command>
+  startrain:
+    aliases: [startstorm,startthunderstorm,storm,rain]
+    description: Starts rain/snow
+    usage: |
+           /<command>
+  grant:
+    aliases: [level,givelevel,grantlevel]
+    description: Grants the specified player a level
+    usage: |
+           /<command> <player> <levels>
