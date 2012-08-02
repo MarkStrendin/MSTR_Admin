@@ -23,6 +23,7 @@ public class StrendinAdmin extends JavaPlugin {
         getCommand("stoprain").setExecutor(new SAStopRainCommand(this));
         getCommand("grant").setExecutor(new SAGrantCommand(this));
         getCommand("spawn").setExecutor(new SASpawnCommand(this));
+        getCommand("home").setExecutor(new SAHomeCommand(this));
         SAComms.logThis("Plugin ENABLED");        
     }
     

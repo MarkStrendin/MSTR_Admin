@@ -20,7 +20,7 @@ public class SAStartRainCommand implements CommandExecutor {
         if (sender instanceof Player) {
             if (SAPermissions.canSetWeather((Player)sender)) {                
                 Player player = (Player)sender;                
-                SAComms.sendWorldBroadcast(player.getWorld(),player.getDisplayName() + " started a storm");
+                //SAComms.sendWorldBroadcast(player.getWorld(),player.getDisplayName() + " started a storm");
                 SAComms.logThis(player.getDisplayName() + " started a storm on " + player.getWorld().getName());
                 player.getWorld().setStorm(true);                
             } else {

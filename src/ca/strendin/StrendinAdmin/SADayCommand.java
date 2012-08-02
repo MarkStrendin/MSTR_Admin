@@ -20,7 +20,7 @@ public class SADayCommand implements CommandExecutor {
         if (sender instanceof Player) {
             if (SAPermissions.canSetTime((Player)sender)) {
                 Player player = (Player)sender;
-                SAComms.sendWorldBroadcast(player.getWorld(),player.getDisplayName() + " set this world's time to day");
+                //SAComms.sendWorldBroadcast(player.getWorld(),player.getDisplayName() + " set this world's time to day");
                 SAComms.logThis(player.getDisplayName() + " set the time for world " + player.getWorld().getName()  + " to day");
                 player.getWorld().setTime(24000);
             } else {

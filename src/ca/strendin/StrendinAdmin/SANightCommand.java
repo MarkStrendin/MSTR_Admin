@@ -20,7 +20,7 @@ public class SANightCommand implements CommandExecutor {
         if (sender instanceof Player) {
             if (SAPermissions.canSetTime((Player)sender)) {
                 Player player = (Player)sender;                
-                SAComms.sendWorldBroadcast(player.getWorld(),player.getDisplayName() + " set this world's time to night");
+                //SAComms.sendWorldBroadcast(player.getWorld(),player.getDisplayName() + " set this world's time to night");
                 SAComms.logThis(player.getDisplayName() + " set the time for world " + player.getWorld().getName()  + " to night");
                 player.getWorld().setTime(38000);
             } else {

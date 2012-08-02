@@ -33,6 +33,9 @@ permissions:
   strendinadmin.spawn:
    description: Able to teleport to the spawn point
    default: true
+  strendinadmin.home:
+   description: Able to teleport to the home point
+   default: true
 commands:  
   setspawn:
     aliases: []
@@ -84,3 +87,8 @@ commands:
     description: Grants the specified player a level
     usage: |
            /<command> <player> <levels>
+  home:
+    aliases: []
+    description: Returns the player to their home point (where they last slept in a bed)
+    usage: |
+           /<command>

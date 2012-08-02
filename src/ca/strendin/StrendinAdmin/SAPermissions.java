@@ -42,5 +42,9 @@ public class SAPermissions {
     public static boolean canTeleportToSpawn(Player player) {
         return player.hasPermission("strendinadmin.spawn");
     }
+
+	public static boolean canTeleportToHome(Player player) {
+        return player.hasPermission("strendinadmin.home");
+	}
     
 }
