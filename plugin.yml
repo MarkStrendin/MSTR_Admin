@@ -6,6 +6,9 @@ authors:
   - Mark Strendin
 description: Basic admin enhancements
 permissions:
+  strendinadmin.sethome:
+   description: Able to set a home point without using a bed
+   default: op
   strendinadmin.setspawn:
    description: Able to set the spawn point for the current world
    default: op
@@ -32,11 +35,21 @@ permissions:
    default: op
   strendinadmin.spawn:
    description: Able to teleport to the spawn point
-   default: true
+   default: op
   strendinadmin.home:
    description: Able to teleport to the home point
-   default: true
+   default: op
 commands:  
+  commandblock:
+    aliases: []
+    description: Summons a command block without needing to know the block ID
+    usage: |
+           /<command>          
+  sethome:
+    aliases: []
+    description: Sets your home / respawn location
+    usage: |
+           /<command>          
   setspawn:
     aliases: []
     description: Sets the world's spawn location
@@ -55,11 +68,6 @@ commands:
   bring:
     aliases: [b]
     description: Teleports selected player to the caster
-    usage: |
-           /<command>
-  tp:
-    aliases: [tp]
-    description: Teleports player to another player
     usage: |
            /<command>
   day:

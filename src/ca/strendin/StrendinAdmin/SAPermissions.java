@@ -3,8 +3,12 @@ package ca.strendin.StrendinAdmin;
 import org.bukkit.entity.Player;
 
 public class SAPermissions {
-    public static boolean canSetSpawn(Player player) {
+	public static boolean canSetSpawn(Player player) {
         return player.hasPermission("strendinadmin.setspawn");
+    }
+	
+	public static boolean canSetHome(Player player) {
+        return player.hasPermission("strendinadmin.sethome");
     }
     
     public static boolean canKick(Player player) {

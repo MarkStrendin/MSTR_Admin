@@ -14,8 +14,9 @@ public class StrendinAdmin extends JavaPlugin {
     public void onEnable() {
         //Commands
         getCommand("setspawn").setExecutor(new SASetSpawnCommand(this));
+        getCommand("sethome").setExecutor(new SASetHomeCommand(this));
         getCommand("playerinfo").setExecutor(new SAPlayerInfoCommand(this));
-        getCommand("tp").setExecutor(new SATPCommand(this));
+        //getCommand("tp").setExecutor(new SATPCommand(this));
         getCommand("bring").setExecutor(new SABringCommand(this));
         getCommand("day").setExecutor(new SADayCommand(this));
         getCommand("night").setExecutor(new SANightCommand(this));
@@ -24,6 +25,7 @@ public class StrendinAdmin extends JavaPlugin {
         getCommand("grant").setExecutor(new SAGrantCommand(this));
         getCommand("spawn").setExecutor(new SASpawnCommand(this));
         getCommand("home").setExecutor(new SAHomeCommand(this));
+        getCommand("commandblock").setExecutor(new SACommandBlockCommand(this));
         SAComms.logThis("Plugin ENABLED");        
     }
     

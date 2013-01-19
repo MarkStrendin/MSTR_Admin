@@ -9,6 +9,7 @@ import org.bukkit.entity.Player;
 public class SAComms {
     public static final Logger log = Logger.getLogger("Minecraft");
     private static ChatColor infoColor = ChatColor.AQUA;
+    public static ChatColor itemColor = ChatColor.AQUA;
     private static ChatColor errorColor = ChatColor.RED;
     private static ChatColor emoteColor = ChatColor.GRAY;
     private static ChatColor serverMsgColor = ChatColor.YELLOW;    
