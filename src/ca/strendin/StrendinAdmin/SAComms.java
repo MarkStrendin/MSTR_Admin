@@ -8,11 +8,12 @@ import org.bukkit.entity.Player;
 
 public class SAComms {
     public static final Logger log = Logger.getLogger("Minecraft");
-    private static ChatColor infoColor = ChatColor.AQUA;
+    private static ChatColor infoColor = ChatColor.GRAY;
     public static ChatColor itemColor = ChatColor.AQUA;
     private static ChatColor errorColor = ChatColor.RED;
     private static ChatColor emoteColor = ChatColor.GRAY;
-    private static ChatColor serverMsgColor = ChatColor.YELLOW;    
+    private static ChatColor serverMsgColor = ChatColor.YELLOW;
+    private static ChatColor italic = ChatColor.ITALIC;
 
     public static void sendError(Player player, String message) {
         player.sendMessage(errorColor + message);        
@@ -25,7 +26,7 @@ public class SAComms {
     }
     
     public static void sendEmote(Player player, String message) {
-        player.sendMessage(emoteColor + message);        
+        player.sendMessage(emoteColor + "" + italic + message);        
     }
     
     public static void sendtoCommandSender(CommandSender sender,String message) {

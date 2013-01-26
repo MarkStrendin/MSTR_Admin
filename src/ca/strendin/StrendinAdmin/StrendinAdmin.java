@@ -1,6 +1,7 @@
 package ca.strendin.StrendinAdmin;
 
 import org.bukkit.entity.Player;
+import org.bukkit.plugin.PluginManager;
 import org.bukkit.plugin.java.JavaPlugin;
 
 public class StrendinAdmin extends JavaPlugin {
@@ -26,7 +27,13 @@ public class StrendinAdmin extends JavaPlugin {
         getCommand("spawn").setExecutor(new SASpawnCommand(this));
         getCommand("home").setExecutor(new SAHomeCommand(this));
         getCommand("commandblock").setExecutor(new SACommandBlockCommand(this));
-        SAComms.logThis("Plugin ENABLED");        
+        getCommand("vanish").setExecutor(new SAVanishCommand(this));
+        SAComms.logThis("Plugin ENABLED"); 
+        
+        PluginManager pm = getServer().getPluginManager();
+		pm.registerEvents(new SAPlayerListener(this), this);
+        
+        
     }
     
     public Player findPlayerNamed(String thisName) {

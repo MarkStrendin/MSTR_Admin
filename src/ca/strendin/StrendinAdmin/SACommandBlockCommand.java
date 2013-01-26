@@ -17,10 +17,10 @@ public class SACommandBlockCommand implements CommandExecutor {
 
     
     public static void givePlayerCommandBlock (Player thisPlayer) {
-        ItemStack DuplicatorToolItem = new ItemStack(commandBlockID,(short)5,(byte)0);
-        SAComms.sendtoCommandSender(thisPlayer, "Giving some command blocks: " + SAComms.itemColor + DuplicatorToolItem.getType());
-        SAComms.logThis("Giving " + thisPlayer.getDisplayName() + " some command blocks (" + DuplicatorToolItem.getType() + ")");
-        thisPlayer.getInventory().addItem(DuplicatorToolItem);
+        ItemStack CommandBlockItem = new ItemStack(commandBlockID,(short)5,(byte)0);
+        SAComms.sendtoCommandSender(thisPlayer, "Giving some command blocks: " + SAComms.itemColor + CommandBlockItem.getType());
+        SAComms.logThis("Giving " + thisPlayer.getDisplayName() + " some command blocks (" + CommandBlockItem.getType() + ")");
+        thisPlayer.getInventory().addItem(CommandBlockItem);
     }
     
     

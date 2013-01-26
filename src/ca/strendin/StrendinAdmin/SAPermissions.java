@@ -7,6 +7,10 @@ public class SAPermissions {
         return player.hasPermission("strendinadmin.setspawn");
     }
 	
+	public static boolean canVanish(Player player) {
+        return player.hasPermission("strendinadmin.vanish");
+    }
+	
 	public static boolean canSetHome(Player player) {
         return player.hasPermission("strendinadmin.sethome");
     }
