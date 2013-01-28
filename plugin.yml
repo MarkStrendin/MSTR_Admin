@@ -1,5 +1,5 @@
-name: StrendinAdmin
-main: ca.strendin.StrendinAdmin.StrendinAdmin
+name: MSTR_Admin
+main: ca.strendin.MSTR_Admin.MSTR_Admin
 version: 1
 author: Mark Strendin
 description: Basic admin enhancements
@@ -24,10 +24,7 @@ permissions:
    default: op
   strendinadmin.time:
    description: Able to set day and night
-   default: op
-  strendinadmin.weather:
-   description: Able to adjust the weather
-   default: op
+   default: op  
   strendinadmin.grant:
    desription: Able to grant levels to players
    default: op
@@ -68,15 +65,7 @@ commands:
     permission: strendinadmin.time
   night:
     description: Sets the current world's time to night
-    permission: strendinadmin.time
-  stoprain:
-    aliases: [stopstorm,stopthunderstorm,rainoff,stormoff]
-    description: Stops rain/snow
-    permission: strendinadmin.weather
-  startrain:
-    aliases: [startstorm,startthunderstorm,storm,rain]
-    description: Starts rain/snow
-    permission: strendinadmin.weather
+    permission: strendinadmin.time  
   grant:
     aliases: [level,givelevel,grantlevel]
     description: Grants the specified player a level
@@ -87,3 +76,5 @@ commands:
   vanish:
     description: Gives the player the effects of a vanish potion
     permission: strendinadmin.vanish
+  test:
+    description: Just a test command
