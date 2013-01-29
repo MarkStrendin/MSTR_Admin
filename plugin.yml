@@ -4,77 +4,77 @@ version: 1
 author: Mark Strendin
 description: Basic admin enhancements
 permissions:
-  strendinadmin.sethome:
+  mstr_admin.sethome:
    description: Able to set a home point without using a bed
    default: op
-  strendinadmin.setspawn:
+  mstr_admin.setspawn:
    description: Able to set the spawn point for the current world
    default: op
-  strendinadmin.kick:
+  mstr_admin.kick:
    description: Able to kick players from the server
    default: op
-  strendinadmin.ban:
+  mstr_admin.ban:
    description: Able to ban players from the server
    default: op
-  strendinadmin.info:
+  mstr_admin.info:
    description: Able to get information from players, including health and hunger
    default: op
-  strendinadmin.teleport:
+  mstr_admin.teleport:
    description: Able to teleport
    default: op
-  strendinadmin.time:
+  mstr_admin.time:
    description: Able to set day and night
    default: op  
-  strendinadmin.grant:
+  mstr_admin.grant:
    desription: Able to grant levels to players
    default: op
-  strendinadmin.spawn:
+  mstr_admin.spawn:
    description: Able to teleport to the spawn point
    default: op
-  strendinadmin.home:
+  mstr_admin.home:
    description: Able to teleport to the home point
    default: op
-  strendinadmin.vanish:
+  mstr_admin.vanish:
    description: Able to vanish
    default: op
-  strendinadmin.commandblock:
+  mstr_admin.commandblock:
    description: Able to create a command block
    default: op
 commands:  
   commandblock:
     description: Summons a command block without needing to know the block ID
-    permission: strendinadmin.commandblock       
+    permission: mstr_admin.commandblock       
   sethome:
     description: Sets your home / respawn location
-    permission: strendinadmin.sethome
+    permission: mstr_admin.sethome
   setspawn:
     description: Sets the world's spawn location
-    permission: strendinadmin.setspawn
+    permission: mstr_admin.setspawn
   spawn:
     description: Teleports to the world's spawn location
   playerinfo:
     aliases: [pi,whois,info]
     description: Displays player information for the specified player
-    permission: strendinadmin.info
+    permission: mstr_admin.info
   bring:
     aliases: [b]
     description: Teleports selected player to the caster
-    permission: strendinadmin.teleport
+    permission: mstr_admin.teleport
   day:
     description: Sets the current world's time to day
-    permission: strendinadmin.time
+    permission: mstr_admin.time
   night:
     description: Sets the current world's time to night
-    permission: strendinadmin.time  
+    permission: mstr_admin.time  
   grant:
     aliases: [level,givelevel,grantlevel]
     description: Grants the specified player a level
-    permission: strendinadmin.grant
+    permission: mstr_admin.grant
   home:
     description: Returns the player to their home point (where they last slept in a bed)
-    permission: strendinadmin.home
+    permission: mstr_admin.home
   vanish:
     description: Gives the player the effects of a vanish potion
-    permission: strendinadmin.vanish
+    permission: mstr_admin.vanish
   test:
     description: Just a test command

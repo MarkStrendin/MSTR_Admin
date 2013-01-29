@@ -102,7 +102,9 @@ public class MSTR_PlayerInfoCommand implements CommandExecutor {
         MSTR_Comms.sendtoCommandSender(sender," Health: " + normalHealthBar(target.getHealth(),target.getMaxHealth()));
         MSTR_Comms.sendtoCommandSender(sender," Hunger: " + normalHealthBar(target.getFoodLevel(),20));                    
         MSTR_Comms.sendtoCommandSender(sender," Current Position: " + "x:"+target.getLocation().getBlockX()+" y:"+target.getLocation().getBlockY()+" z:"+target.getLocation().getBlockZ()+" in world: " + target.getLocation().getWorld().getName());
-        MSTR_Comms.sendtoCommandSender(sender," Bed Spawn Location: " + "x:"+target.getBedSpawnLocation().getBlockX()+" y:"+target.getBedSpawnLocation().getBlockY()+" z:"+target.getBedSpawnLocation().getBlockZ()+" in world: " + target.getBedSpawnLocation().getWorld().getName());
+        if (target.getBedSpawnLocation() != null) {
+        	MSTR_Comms.sendtoCommandSender(sender," Bed Spawn Location: " + "x:"+target.getBedSpawnLocation().getBlockX()+" y:"+target.getBedSpawnLocation().getBlockY()+" z:"+target.getBedSpawnLocation().getBlockZ()+" in world: " + target.getBedSpawnLocation().getWorld().getName());
+        }
         DateFormat formatter = new SimpleDateFormat("EEEEE MMMMM dd, yyyy  h:mm a");
     	Calendar calendar = Calendar.getInstance();
     	calendar.setTimeInMillis(target.getFirstPlayed());
@@ -120,7 +122,9 @@ public class MSTR_PlayerInfoCommand implements CommandExecutor {
         MSTR_Comms.sendInfo(sender," Health: " + coloredHealthBar(target.getHealth(),target.getMaxHealth()));
         MSTR_Comms.sendInfo(sender," Hunger: " + coloredHealthBar(target.getFoodLevel(),20));            
         MSTR_Comms.sendInfo(sender," Current Position: " + ChatColor.WHITE + "x:"+target.getLocation().getBlockX()+" y:"+target.getLocation().getBlockY()+" z:"+target.getLocation().getBlockZ()+" in world: " + target.getLocation().getWorld().getName());
-        MSTR_Comms.sendInfo(sender," Bed Spawn Location: " + ChatColor.WHITE + "("+target.getBedSpawnLocation().getBlockX()+","+target.getBedSpawnLocation().getBlockY()+","+target.getBedSpawnLocation().getBlockZ()+") in world: " + target.getBedSpawnLocation().getWorld().getName());
+        if (target.getBedSpawnLocation() != null) {
+        	MSTR_Comms.sendInfo(sender," Bed Spawn Location: " + ChatColor.WHITE + "("+target.getBedSpawnLocation().getBlockX()+","+target.getBedSpawnLocation().getBlockY()+","+target.getBedSpawnLocation().getBlockZ()+") in world: " + target.getBedSpawnLocation().getWorld().getName());
+        }
         DateFormat formatter = new SimpleDateFormat("EEEEE MMMMM dd, yyyy  h:mm a");
     	Calendar calendar = Calendar.getInstance();
     	calendar.setTimeInMillis(target.getFirstPlayed());
@@ -143,7 +147,9 @@ public class MSTR_PlayerInfoCommand implements CommandExecutor {
     		MSTR_Comms.sendInfo(sender," " + MSTR_Comms.serverMsgColor + target.getName() + " is currently banned from the server");
     	}
     	
-    	MSTR_Comms.sendInfo(sender," Bed Spawn Location: " + ChatColor.WHITE + "("+target.getBedSpawnLocation().getBlockX()+","+target.getBedSpawnLocation().getBlockY()+","+target.getBedSpawnLocation().getBlockZ()+") in world: " + target.getBedSpawnLocation().getWorld().getName());
+    	if (target.getBedSpawnLocation() != null) {
+    		MSTR_Comms.sendInfo(sender," Bed Spawn Location: " + ChatColor.WHITE + "("+target.getBedSpawnLocation().getBlockX()+","+target.getBedSpawnLocation().getBlockY()+","+target.getBedSpawnLocation().getBlockZ()+") in world: " + target.getBedSpawnLocation().getWorld().getName());
+    	}
     	
     	DateFormat formatter = new SimpleDateFormat("EEEEE MMMMM dd, yyyy  h:mm a");
     	Calendar calendar = Calendar.getInstance();
@@ -166,7 +172,9 @@ public class MSTR_PlayerInfoCommand implements CommandExecutor {
     		MSTR_Comms.sendtoCommandSender(sender," " + target.getName() + " is currently banned from the server");
     	}
     	
-    	MSTR_Comms.sendtoCommandSender(sender," Bed Spawn Location: " + "x:"+target.getBedSpawnLocation().getBlockX()+" y:"+target.getBedSpawnLocation().getBlockY()+" z:"+target.getBedSpawnLocation().getBlockZ()+" in world: " + target.getBedSpawnLocation().getWorld().getName());
+    	if (target.getBedSpawnLocation() != null) {
+    		MSTR_Comms.sendtoCommandSender(sender," Bed Spawn Location: " + "x:"+target.getBedSpawnLocation().getBlockX()+" y:"+target.getBedSpawnLocation().getBlockY()+" z:"+target.getBedSpawnLocation().getBlockZ()+" in world: " + target.getBedSpawnLocation().getWorld().getName());
+    	}
     	
     	DateFormat formatter = new SimpleDateFormat("EEEEE MMMMM dd, yyyy  h:mm a");
     	Calendar calendar = Calendar.getInstance();
