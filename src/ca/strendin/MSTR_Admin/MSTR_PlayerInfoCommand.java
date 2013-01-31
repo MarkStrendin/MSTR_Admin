@@ -152,9 +152,15 @@ public class MSTR_PlayerInfoCommand implements CommandExecutor {
     	}
     	
     	DateFormat formatter = new SimpleDateFormat("EEEEE MMMMM dd, yyyy  h:mm a");
+
     	Calendar calendar = Calendar.getInstance();
-    	calendar.setTimeInMillis(target.getLastPlayed());
-    	MSTR_Comms.sendInfo(sender," Last seen: " + ChatColor.WHITE + formatter.format(calendar.getTime()));	      
+
+        calendar.setTimeInMillis(target.getFirstPlayed());
+        MSTR_Comms.sendInfo(sender," First seen: " + ChatColor.WHITE + formatter.format(calendar.getTime()));
+
+        calendar.setTimeInMillis(target.getLastPlayed());
+        MSTR_Comms.sendInfo(sender," Last seen: " + ChatColor.WHITE + formatter.format(calendar.getTime()));
+
     }
 
     private void sendOfflinePlayerInfoToConsole(CommandSender sender, OfflinePlayer target) {   	
@@ -177,9 +183,14 @@ public class MSTR_PlayerInfoCommand implements CommandExecutor {
     	}
     	
     	DateFormat formatter = new SimpleDateFormat("EEEEE MMMMM dd, yyyy  h:mm a");
-    	Calendar calendar = Calendar.getInstance();
-    	calendar.setTimeInMillis(target.getLastPlayed());
-    	MSTR_Comms.sendtoCommandSender(sender," Last seen: " + formatter.format(calendar.getTime()));
+
+        Calendar calendar = Calendar.getInstance();
+
+        calendar.setTimeInMillis(target.getFirstPlayed());
+        MSTR_Comms.sendtoCommandSender(sender," First seen: " + formatter.format(calendar.getTime()));
+
+        calendar.setTimeInMillis(target.getLastPlayed());
+        MSTR_Comms.sendtoCommandSender(sender," Last seen: " + formatter.format(calendar.getTime()));
     	  		
     }
     
